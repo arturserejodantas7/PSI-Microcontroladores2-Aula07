@@ -1,0 +1,23 @@
+START - test_TU_L01_sequencia_veiculos
+ PASS - test_TU_L01_sequencia_veiculos
+START - test_TU_L02_noturno_vai_para_amarelo
+ PASS - test_TU_L02_noturno_vai_para_amarelo
+START - test_TU_L03_duracoes
+ PASS - test_TU_L03_duracoes
+START - test_TU_L04_verde_com_pedido
+ PASS - test_TU_L04_verde_com_pedido
+START - test_TU_L05_aceita_pedido
+ PASS - test_TU_L05_aceita_pedido
+START - test_TU_L06_libera_pedestre
+ PASS - test_TU_L06_libera_pedestre
+START - test_TU_L07_ped_pode_verde
+ PASS - test_TU_L07_ped_pode_verde
+START - test_TU_L08_ped_aceita_botao
+ PASS - test_TU_L08_ped_aceita_botao
+START - test_TU_L09_debounce_rejeita_ruido
+ PASS - test_TU_L09_debounce_rejeita_ruido
+START - test_TU_L10_debounce_aceita
+ PASS - test_TU_L10_debounce_aceita
+START - test_TU_L11_debounce_limiar_zero
+ PASS - test_TU_L11_debounce_limiar_zero
+SUITE logica: 11 PASS, 0 FAIL

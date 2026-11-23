@@ -1,0 +1,29 @@
+ID       RES   DESCRIÇÃO
+------------------------------------------------------------------------------
+LOG-V01  PASS  Exclusão mútua: no máx. 1 LED de carro aceso
+               máx. simultâneos = 1
+LOG-V02  PASS  Verde = 3000 ms (+/-80) em 5 ciclos
+LOG-V03  PASS  Amarelo = 1000 ms em 6 ciclos
+LOG-V04  PASS  Vermelho = 4000 ms em 6 ciclos
+LOG-V05  PASS  Ordem verde -> amarelo -> vermelho (nunca verde -> vermelho)
+LOG-V06  PASS  PED_GO=1 só durante o vermelho, com guarda >= 80 ms
+               guarda mínima = 99 ms
+LOG-V07  PASS  Botão de travessia encerra o verde (mín. 1 s) com segurança
+               atraso vs. esperado (ms): [0]
+LOG-V08  PASS  Noturno: amarelo pisca 1 s/1 s, sem verde e sem PED_GO
+               aceso=[1000, 1000, 1000, 1000] apagado=[1000, 1000, 1001]
+LOG-P01  PASS  Exclusão mútua: verde e vermelho do pedestre nunca juntos
+               máx. simultâneos = 1
+LOG-P02  PASS  Pedestre verde só com PED_GO=1 (sincronismo)
+               7 verdes, fora: []
+LOG-P03  PASS  Verde apaga até 50 ms após PED_GO cair
+               latências: [1, 0, 0, 1, 0, 0, 0]
+LOG-P04  PASS  Pedestre verde ~3900 ms (~4 s)
+LOG-P05  PASS  Botão gera PED_REQ e o pedido é zerado ao abrir
+               1 botões, 1 pedidos
+LOG-P06  PASS  Noturno: vermelho do pedestre pisca 1 s/1 s, sem verde
+               aceso=[1000, 1000, 1001, 1000]
+LOG-X01  PASS  Placas reais: pedestre verde nunca junto com carro verde/amarelo
+               7 verdes verificados, 0 conflitos, bordas casadas=7
+------------------------------------------------------------------------------
+RESULTADO GERAL: PASS
