@@ -1,0 +1,31 @@
+/*
+ * Placa de PEDESTRES — mapeamento de pinos (FRDM-KL25Z)
+ *
+ *  Sinal             Pino   Header Arduino  Ligação
+ *  ----------------  -----  --------------  ------------------------------------
+ *  LED verde         PTD4   D2   (J1-6)     pino -> 330R -> LED -> GND
+ *  LED vermelho      PTA12  D3   (J1-8)     pino -> 330R -> LED -> GND
+ *  Botão travessia   PTC8   D6   (J1-14)    pino -> botão -> GND (pull-up interno)
+ *  LINK_PED_GO   in  PTC9   D7   (J1-16)    <- D7 da placa de veículos (pull-down)
+ *  LINK_NOITE    in  PTA13  D8   (J2-2)     <- D8 da placa de veículos (pull-down)
+ *  LINK_PED_REQ  out PTD5   D9   (J2-4)     -> D9 da placa de veículos
+ *  GND               GND         (J2-14)    <-> GND da placa de veículos
+ *
+ * Pull-down nas entradas: com o fio solto o pedestre fica VERMELHO (seguro).
+ */
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	zephyr,user {
+		ped-verde-gpios     = <&gpiod 4 GPIO_ACTIVE_HIGH>;
+		ped-vermelho-gpios  = <&gpioa 12 GPIO_ACTIVE_HIGH>;
+		btn-travessia-gpios = <&gpioc 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		link-ped-go-gpios   = <&gpioc 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+		link-noite-gpios    = <&gpioa 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+		link-ped-req-gpios  = <&gpiod 5 GPIO_ACTIVE_HIGH>;
+	};
+};
+
+&gpioa { status = "okay"; };
+&gpioc { status = "okay"; };
+&gpiod { status = "okay"; };
