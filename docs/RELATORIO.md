@@ -1,6 +1,6 @@
 # Aula 07 — Semáforos de Pedestres e Veículos (Zephyr / FRDM-KL25Z)
 
-**PSI – Microcontroladores 2** · Artur Serejo Dantas (Nº USP 15441730) · Repositório: [URL]
+**PSI – Microcontroladores 2** · Artur Serejo Dantas (Nº USP 15441730) · Repositório: https://github.com/arturserejodantas7/PSI-Microcontroladores2-Aula07
 
 ## 1. Requisitos
 
