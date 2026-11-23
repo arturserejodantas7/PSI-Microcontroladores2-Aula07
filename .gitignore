@@ -1,0 +1,5 @@
+build*/
+twister-out*/
+__pycache__/
+*.pyc
+.vscode/settings.json
