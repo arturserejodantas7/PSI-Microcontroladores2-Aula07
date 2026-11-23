@@ -1,0 +1,10 @@
+tests:
+  semaforos.unit_veiculos:
+    tags: semaforos
+    timeout: 300
+    platform_allow:
+      - frdm_kl25z
+      - native_sim
+      - qemu_cortex_m0
+    integration_platforms:
+      - native_sim
